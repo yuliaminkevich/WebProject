@@ -20,28 +20,29 @@ class PostList {
     }
 
     static _validate(photoPost) {
-        if (!photoPost.id)
+        if (!PostList._isValidDescription(photoPost.description)) {
             return false;
-        if (!PostList._isValidDescription(photoPost.description))
+        }
+        if (!photoPost.createdAt || !PostList._isValidDate(photoPost.createdAt)) {
             return false;
-        if (!photoPost.createdAt || !PostList._isValidDate(photoPost.createdAt))
+        }
+        if (!photoPost.author) {
             return false;
-        if (!photoPost.author)
+        }
+        if (!photoPost.photoLink) {
             return false;
-        if (!photoPost.photoLink)
+        }
+        if (!photoPost.hashTags || !PostList._isValidHashTag(photoPost.hashTags)) {
             return false;
-        if (photoPost.hashTags) {
-            if (!PostList._isValidHashTag(photoPost.hashTags))
-                return false;
         }
         return true;
     }
 
-    setRandomID(post){
+    _setRandomID(post){
         let idObjectArray=[];
-        post.id = (Math.floor(Math.random() * 10000000000000001) + new Date().getTime()).toString();
+        post.id =Math.floor(Math.random() * 10000000000000001) + new Date().getTime()+'';
         if (idObjectArray.includes(post.id)) {
-            this.setRandomID(post);
+            this._setRandomID(post);
         } else {
             idObjectArray.push(post.id);
         }
@@ -63,74 +64,77 @@ class PostList {
     }
 
     add(photoPost) {
-        this.setRandomID(photoPost);
+        this._setRandomID(photoPost);
         photoPost.createdAt = new Date();
         photoPost.author = 'Mr. Snow';
-        if (!PostList._validate(photoPost))
+        if (!PostList._validate(photoPost)) {
             return false;
+        }
         this._posts.push(photoPost);
         return true;
     }
 
     addAll(posts){
         let a = this;
-        return posts.filter(function (item) {
-            if (!a.add(item))
-                return true;
-        });
+        return posts.filter(item=> !a.add(item));
     }
 
     edit(id, photoPost) {
         let numEl = this._posts.findIndex(elem => elem.id === id);
         let description;
-        if (!photoPost.description)
+        if (!photoPost.description) {
             description = this._posts[numEl].description;
-        else
+        }
+        else {
             description = photoPost.description;
+        }
         let photoLink = photoPost.photoLink || this._posts[numEl].photoLink;
         let hashTags = photoPost.hashTags || this._posts[numEl].hashTags;
-        if (!PostList._isValidDescription(description))
+        if (!PostList._isValidDescription(description)) {
             return false;
-        if (!PostList._isValidHashTag(hashTags))
+        }
+        if (!PostList._isValidHashTag(hashTags)) {
             return false;
+        }
         this._posts.splice(numEl, 1, {
             id: id,
             description: description,
             createdAt: this._posts[numEl].createdAt,
             author: this._posts[numEl].author,
             photoLink: photoLink,
-            hashTags: hashTags
+            hashTags: hashTags,
+            likes: this._posts[numEl].likes
         });
-        if (!PostList._validate(this._posts[numEl]))
-            return false;
         return true;
     }
 
     remove(id) {
         let numEl = this._posts.findIndex(elem => elem.id === id);
-        this._posts.splice(numEl, 1);
+        if (numEl!==-1) {
+            this._posts.splice(numEl, 1);
+        }
         return true;
     }
 
-    clear() {
-
-
+    clear(){
+        this._posts=[];
     }
+
 }
 
 class filterHelper {
     author(list, author) {
-        return list.filter(item => item.author === author);
+        return list.filter(item => item.includes(author));
     }
 
     dateFrom(list, dateFrom) {
         let date = new Date(dateFrom);
-        return list.filter(item => item.createdAt > date);
+        return list.filter(item => item.createdAt >= date);
     }
 
     dateTo(list, dateTo) {
         let date = new Date(dateTo);
-        return list.filter(item => item.createdAt < date);
+        return list.filter(item => item.createdAt <= date);
     }
 
     hashTags(list, hashTags) {
@@ -328,4 +332,3 @@ let noValidPosts = posts.addAll([
         likes: ['yuliaminkevich','Mr. Snow','natallius','lizaKurochkina']
     }
 ]);
-console.log(noValidPosts);
