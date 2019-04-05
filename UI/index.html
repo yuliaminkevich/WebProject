@@ -5,19 +5,25 @@
     <title>GoReality</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css?family=Laila:600|PT+Serif" rel="stylesheet"></head>
 <body>
 <header>
-    <img src="https://cdn.glitch.com/c6987714-d2b8-4f53-bde5-c7599c30fb77%2Flogo.png?1551644091345" alt="logo" id="logo">
-    <p id="name-site">GoReality</p>
-    <button id="add">
+    <div class="header1">
+        <img src="https://cdn.glitch.com/c6987714-d2b8-4f53-bde5-c7599c30fb77%2Flogo.png?1551644091345" alt="logo" id="logo">
+        <p id="name-site">GoReality</p>
+    </div>
+    <button class="bt-site" id="add">
         Add Photo
     </button>
-    <p id="name-user">User Name</p>
-    <button id="bt-exit">
-        Exit
-    </button>
+    <div class="header1">
+        <span id="name-user">User Name</span>
+        <button class="bt-site" id="bt-exit">
+            Exit
+        </button>
+    </div>
 </header>
+<div class="background"></div>
+
 <main>
     <div class="content">
         <div class="post">
@@ -25,10 +31,41 @@
                 <strong>
                     yuliaminkevich
                 </strong>
-                <small class="date">18:20 04.03.2019</small>
+                <span class="date">18:20 04.03.2019</span>
+                <img src="https://images.unsplash.com/photo-1551350663-0c96e5eda5d1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80" alt="photo" class="post">
+                <button type="button">
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button type="button">
+                    <i class="fa fa-edit"></i>
+                </button>
+                <button type="button">
+                    <i class="fa fa-trash-o"></i>
+                </button>
+            </div>
+            <div class="discription">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                </p>
+                <p>
+                    #me #love #instadaily #photooftheday #fun #followme #smile #summer #instalike #picoftheday #follow4follow #tflers #fashion #like4like #follow #instagood #amazing #cute #likeforlike
+                </p>
+            </div>
+        </div>
+        <div class="post">
+            <div class="pic">
+                <strong>yuliaminkevich</strong>
+                <span class="date">18:20 04.03.2019</span>
                 <img src="https://cdn.glitch.com/c6987714-d2b8-4f53-bde5-c7599c30fb77%2Fdonat.jpg?1551709627059" alt="photo" class="post">
                 <button type="button">
-                    <i class="fa fa-heart" style="color:#8d6e63"></i></button>
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button type="button">
+                    <i class="fa fa-edit"></i>
+                </button>
+                <button type="button">
+                    <i class="fa fa-trash-o"></i>
+                </button>
             </div>
             <div class="discription">
                 <p>
@@ -44,30 +81,16 @@
                 <strong>
                     yuliaminkevich
                 </strong>
-                <small class="date">18:20 04.03.2019</small>
-                <img src="https://cdn.glitch.com/c6987714-d2b8-4f53-bde5-c7599c30fb77%2Fimage1.jpg?1551686059451" alt="photo" class="post">
-                <button type="button">
-                    <i class="fa fa-heart" style="color:#8d6e63"></i>
-                </button>
-            </div>
-            <div class="discription">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <p>
-                    #me #love #instadaily #selfie #photooftheday #fun #followme #smile #summer #swag #instalike #igers #tbt #picoftheday #follow4follow #tflers #fashion #like4like #follow #instagood #amazing #cute #friends #bestoftheday #happy #instatag #l4l #beautiful #likeforlike
-                </p>
-            </div>
-        </div>
-        <div class="post">
-            <div class="pic">
-                <strong>
-                    yuliaminkevich
-                </strong>
-                <small class="date">18:20 04.03.2019</small>
+                <span class="date">18:20 04.03.2019</span>
                 <img src="https://cdn.glitch.com/c6987714-d2b8-4f53-bde5-c7599c30fb77%2Fsky.jpg?1551709519164" alt="photo" class="post">
                 <button type="button">
-                    <i class="fa fa-heart" style="color:#8d6e63"></i>
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button type="button">
+                    <i class="fa fa-edit"></i>
+                </button>
+                <button type="button">
+                    <i class="fa fa-trash-o"></i>
                 </button>
             </div>
             <div class="discription">
@@ -84,10 +107,16 @@
                 <strong>
                     yuliaminkevich
                 </strong>
-                <small class="date">18:20 04.03.2019</small>
+                <span class="date">18:20 04.03.2019</span>
                 <img src="https://cdn.glitch.com/c6987714-d2b8-4f53-bde5-c7599c30fb77%2Fimage2.jpg?1551712041713" alt="photo" class="post">
                 <button type="button">
-                    <i class="fa fa-heart" style="color:#8d6e63"></i>
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button type="button">
+                    <i class="fa fa-edit"></i>
+                </button>
+                <button type="button">
+                    <i class="fa fa-trash-o"></i>
                 </button>
             </div>
             <div class="discription">
@@ -104,10 +133,16 @@
                 <strong>
                     yuliaminkevich
                 </strong>
-                <small class="date">18:20 04.03.2019</small>
+                <span class="date">18:20 04.03.2019</span>
                 <img src="https://cdn.glitch.com/c6987714-d2b8-4f53-bde5-c7599c30fb77%2Fimage4.jpg?1551712066858" alt="photo" class="post">
                 <button type="button">
-                    <i class="fa fa-heart" style="color:#8d6e63"></i>
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button type="button">
+                    <i class="fa fa-edit"></i>
+                </button>
+                <button type="button">
+                    <i class="fa fa-trash-o"></i>
                 </button>
             </div>
             <div class="discription">
@@ -124,10 +159,16 @@
                 <strong>
                     yuliaminkevich
                 </strong>
-                <small class="date">18:20 04.03.2019</small>
+                <span class="date">18:20 04.03.2019</span>
                 <img src="https://cdn.glitch.com/c6987714-d2b8-4f53-bde5-c7599c30fb77%2Fimage1.jpg?1551686059451" alt="photo" class="post">
                 <button type="button">
-                    <i class="fa fa-heart" style="color:#8d6e63"></i>
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button type="button">
+                    <i class="fa fa-edit"></i>
+                </button>
+                <button type="button">
+                    <i class="fa fa-trash-o"></i>
                 </button>
             </div>
             <div class="discription">
@@ -144,10 +185,16 @@
                 <strong>
                     yuliaminkevich
                 </strong>
-                <small class="date">18:20 04.03.2019</small>
+                <span class="date">18:20 04.03.2019</span>
                 <img src="https://cdn.glitch.com/c6987714-d2b8-4f53-bde5-c7599c30fb77%2Fimage3.jpg?1551712105315" alt="photo" class="post">
                 <button type="button">
-                    <i class="fa fa-heart" style="color:#8d6e63"></i>
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button type="button">
+                    <i class="fa fa-edit"></i>
+                </button>
+                <button type="button">
+                    <i class="fa fa-trash-o"></i>
                 </button>
             </div>
             <div class="discription">
@@ -164,10 +211,16 @@
                 <strong>
                     yuliaminkevich
                 </strong>
-                <small class="date">18:20 04.03.2019</small>
-                <img src="https://cdn.glitch.com/c6987714-d2b8-4f53-bde5-c7599c30fb77%2Fimage1.jpg?1551686059451" alt="photo" class="post">
+                <span class="date">18:20 04.03.2019</span>
+                <img src="https://images.unsplash.com/photo-1551265158-307ed801f15a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1056&q=80" alt="photo" class="post">
                 <button type="button">
-                    <i class="fa fa-heart" style="color:#8d6e63"></i>
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button type="button">
+                    <i class="fa fa-edit"></i>
+                </button>
+                <button type="button">
+                    <i class="fa fa-trash-o"></i>
                 </button>
             </div>
             <div class="discription">
@@ -184,10 +237,16 @@
                 <strong>
                     yuliaminkevich
                 </strong>
-                <small class="date">18:20 04.03.2019</small>
-                <img src="https://cdn.glitch.com/c6987714-d2b8-4f53-bde5-c7599c30fb77%2Fimage1.jpg?1551686059451" alt="photo" class="post">
+                <span class="date">18:20 04.03.2019</span>
+                <img src="https://cdn.glitch.com/c6987714-d2b8-4f53-bde5-c7599c30fb77%2Fdonat.jpg?1551709627059" alt="photo" class="post">
                 <button type="button">
-                    <i class="fa fa-heart" style="color:#8d6e63"></i>
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button type="button">
+                    <i class="fa fa-edit"></i>
+                </button>
+                <button type="button">
+                    <i class="fa fa-trash-o"></i>
                 </button>
             </div>
             <div class="discription">
@@ -204,10 +263,16 @@
                 <strong>
                     yuliaminkevich
                 </strong>
-                <small class="date">18:20 04.03.2019</small>
-                <img src="https://cdn.glitch.com/c6987714-d2b8-4f53-bde5-c7599c30fb77%2Fimage1.jpg?1551686059451" alt="photo" class="post">
+                <span class="date">18:20 04.03.2019</span>
+                <img src="https://images.unsplash.com/photo-1507273026339-31b655f3752d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="photo" class="post">
                 <button type="button">
-                    <i class="fa fa-heart" style="color:#8d6e63"></i>
+                    <i class="fa fa-heart"></i>
+                </button>
+                <button type="button">
+                    <i class="fa fa-edit"></i>
+                </button>
+                <button type="button">
+                    <i class="fa fa-trash-o"></i>
                 </button>
             </div>
             <div class="discription">
@@ -219,36 +284,41 @@
                 </p>
             </div>
         </div>
-        <button id="bt-load">
+        <button class="bt-site" id="bt-load">
             Load
         </button>
     </div>
 
     <div class="sidebar">
-        Поиск
-        <div>
-            <form action="" method="get">
-                <input name="s" placeholder="Username" type="search">
+        <p id="search">
+            Filter
+        </p>
+        <div class="filter">
+            <div>
+                <form action="" method="get">
+                    <input name="s" placeholder="Username" type="search">
+                </form>
+            </div>
+            <div>
+                <form action="" method="get">
+                    <input name="s" placeholder="Date from" type="search">
+                </form>
+            </div>
+            <div>
+                <form action="" method="get">
+                    <input name="s" placeholder="Date to" type="search">
+                </form>
+            </div>
+            <div>
+                <form action="" method="get">
+                    <input name="s" placeholder="Hashtag" type="search">
+                </form>
+            </div>
+            <div>
                 <button type="submit">
                     <i class="fa fa-search"></i>
                 </button>
-            </form>
-        </div>
-        <div>
-            <form action="" method="get">
-                <input name="s" placeholder="Date" type="search">
-                <button type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
-            </form>
-        </div>
-        <div>
-            <form action="" method="get">
-                <input name="s" placeholder="Hashtag" type="search">
-                <button type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
-            </form>
+            </div>
         </div>
     </div>
 </main>
@@ -268,10 +338,11 @@
         y3602061@gmail.com
     </div>
     <div>
-        04.03.2019
+        06.03.2019
     </div>
 </footer>
 
-
+<script src="script.js"></script>
 </body>
+
 </html>
