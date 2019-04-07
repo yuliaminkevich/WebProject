@@ -1,7 +1,6 @@
 class View {
     constructor(user) {
         this._user = user;
-        // this._setUser(user);
     }
 
     _setUser(user) {
