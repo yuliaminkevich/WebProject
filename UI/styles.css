@@ -1,58 +1,111 @@
+.background{
+  background-image: url(https://cdn.glitch.com/c6987714-d2b8-4f53-bde5-c7599c30fb77%2F302310-P7N7DJ-207.jpg?1551904281824);
+  position: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
 body {
-  display: flex;
-  flex-direction:row;
-  flex-wrap: wrap;
-  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
-	background-color: #ecfdff;
+    margin: 0;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    font-family: 'PT Serif', serif;
+    font-size: 1.3vw;
+    background-color: rgba(211, 211, 211, 0);
 }
 header {
-  position: fixed;
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  align-items: center;
-	height: 60px;
-  background-color: white;
-  border-bottom: 2px groove #B7B7BA;
-  z-index: 10;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: 10%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-bottom: 2px groove #B7B7BA;
+    z-index: 10;
 }
 .content {
   display:flex;
   flex-direction:column;
   justify-content: space-between;
-  width: 61%;
+  width: 60%;
   float: left;
-	margin: 90px 4% 0 5%;
+    margin: 10% 4% 0 8%;
   position: relative;
 }
-.post {
+.post,.photopost {
   display: flex;
-/*   flex-direction:column; */
-  margin-bottom: 4%;
+  margin-bottom: 3%;
   width: 100%;
   position: relative;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
    border-radius: 10px
 }
 .pic {
   width: 60%;
-  padding: 1% 1% 3% 1.5%;
+  padding: 1% 1% 2% 1.5%;
 }
 .date {
   float: right;
-  margin-right: 1%;
+  margin: 1% 2%;
+    font-size: 1.2vw;
 }
-.discription {
+.description {
   width: 38%;
+  padding: 3% 2% 0 0;
 }
 .sidebar {
-position:fixed;
-	width: 25%;
+    position: fixed;
+	width: 20%;
 	height: 400px;
-	margin: 90px 5% 110px 70%;
-  background-color: white;
-  border-radius: 10px;
+	margin: 10% 0 110px 73%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
 }
+.filter {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 320px;
+    padding: 0 4% 2%;
+}
+#search {
+    text-align: center;
+    font-size: 120%;
+}
+input:-moz-placeholder {
+  color: #B6C0A5;
+  font-style: italic;
+  background: #E0EFCA;
+}
+form {
+  width: 100%;
+  height: 140%;
+  margin: 0 auto;
+
+}
+input {
+  width: 90%;
+  height: 100%;
+  padding-left: 10px;
+  border: 2px solid #7BA7AB;
+  border-radius: 5px;
+  outline: none;
+  background: #F9F0DA;
+  color: #9E9C9C;
+    font-size: 1.4vw;
+}
+button>.sidebar {
+  width: 33%;
+  height: 20%;
+  border: none;
+  background: #7BA7AB;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
 .clearfix {
   clear: both;
 }
@@ -61,74 +114,50 @@ footer {
   width: 100%;
   justify-content: space-around;
   align-items: center;
-	height: 80px;
+  height: 50px;
   background-color: white;
   border-top: 1px groove #B7B7BA;
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: 1;
+}
+.header1 {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 20%;
+    font-size: 1.4vw;
+    text-align: center;
 }
 #logo {
-  float:left;
-  height: 52px;
+    float:left;
+    height: 62px;
 }
 #name-site {
+    font-family: 'Laila', serif;
+    font-size: 120%;
   	float: left;
 }
-#add {
-    float: left;
-/*     margin: 14px 0 0 30%; */
-    width: 9%;
-    height: 24px;
+#name-user {
+    font-size: 1.6vw;
+}
+.bt-site {
+    height: 28px;
     background-color: #ecfdff;
     border-radius: 5px;
+    font-size: 1.3vw;
+}
+#bt-add {
+    width: 10%;
+    visibility: hidden;
 }
 #bt-exit {
-    width: 8%;
-    height: 24px;
+    width: 45%;
   	float: right;
-    background-color: #ecfdff;
-    border-radius: 5px;
-/*     margin: 14px 3% 0 2%; */
-}
-#name-user {
-    height: 15px;
-/*   	float: right; */
-/*     margin-bottom: 20% ; */
 }
 #bt-load {
     width: 18%;
-    height: 24px;
   	float: right;
-    background-color: white;
-    border-radius: 5px;
     margin: 0 0 3% 40%;
 }
-input:-moz-placeholder {
-  color: #B6C0A5;
-  font-style: italic;
-  background: #E0EFCA;
-}
-form {
-  position: relative;
-  width: 300px;
-  margin: 0 auto;
-}
-input {
-  width: 65%;
-  height: 27px;
-  padding-left: 10px;
-  border: 2px solid #7BA7AB;
-  border-radius: 5px;
-  outline: none;
-  background: #F9F0DA;
-  color: #9E9C9C;
-}
-button>.sidebar {
-  position: absolute;
-  top: 0;
-  right: 0px;
-  width: 33%;
-  height: 20%;
-  border: none;
-  background: #7BA7AB;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
+.bt-delete,.bt-edit {
+    visibility: hidden;
 }
