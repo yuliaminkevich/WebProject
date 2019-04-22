@@ -5,17 +5,17 @@
     <title>GoReality</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Laila:600|PT+Serif" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css?family=Laila:600|PT+Serif" rel="stylesheet">
+</head>
 <body>
 <header>
     <div class="header1">
-        <img src="https://cdn.glitch.com/c6987714-d2b8-4f53-bde5-c7599c30fb77%2Flogo.png?1551644091345" alt="logo" id="logo">
-        <p id="name-site">GoReality</p>
+        <img src="images/logo.svg" alt="logo" id="logo">
     </div>
     <button class="bt-site" id="bt-add">Add Photo</button>
     <div class="header1">
         <span id="name-user"></span>
-        <button class="bt-site" id="bt-exit">Sign in</button>
+        <button class="bt-site" id="bt-exit">Sign In</button>
     </div>
 </header>
 
@@ -23,20 +23,21 @@
 
 <main>
     <div class="content">
+        <p class="not-found">not found</p>
         <template id="postTemplate">
             <div class="post">
                 <div class="pic">
                     <strong></strong>
                     <span class="date"></span>
                     <img src="" alt="photo" class="photopost">
-                    <button type="button">
-                        <i class="fa fa-heart"></i>
+                    <button type="button" class="bt-like">
+                        <i class="fa fa-heart fa-lg"></i>
                     </button>
                     <button type="button" class="bt-edit">
-                        <i class="fa fa-edit"></i>
+                        <i class="fa fa-edit fa-lg"></i>
                     </button>
                     <button type="button" class="bt-delete">
-                        <i class="fa fa-trash-o"></i>
+                        <i class="fa fa-trash-o fa-lg"></i>
                     </button>
                 </div>
                 <div class="description">
@@ -46,44 +47,56 @@
             </div>
         </template>
 
-        <button class="bt-site" id="bt-load">
-            Load
-        </button>
+
     </div>
 
     <div class="sidebar">
-        <p id="search">
+        <p class="search">
             Filter
         </p>
         <div class="filter">
-            <div>
-                <form action="" method="get">
-                    <input name="s" placeholder="Username" type="search">
-                </form>
-            </div>
-            <div>
-                <form action="" method="get">
-                    <input name="s" placeholder="Date from" type="search">
-                </form>
-            </div>
-            <div>
-                <form action="" method="get">
-                    <input name="s" placeholder="Date to" type="search">
-                </form>
-            </div>
-            <div>
-                <form action="" method="get">
-                    <input name="s" placeholder="Hashtag" type="search">
-                </form>
-            </div>
-            <div>
-                <button type="submit">
-                    <i class="fa fa-search"></i>
+            <form name="filter" action="" method="post">
+                <input name="usernameFilter" placeholder="Username" type="search">
+                <input name="dateFrom" placeholder="Date from" type="date">
+                <input name="dateTo" placeholder="Date to" type="date">
+                <input name="hashTag" placeholder="Hashtag" type="search">
+                <button type="submit" class="bt-search">
+                    <i class="fa fa-search fa-2x"></i>
                 </button>
-            </div>
+            </form>
         </div>
     </div>
+    <button class="bt-site" id="bt-load">
+        Load
+    </button>
 </main>
+
+<div class="loginPage">
+    <form name="login" method="post">
+        <input name="username" placeholder="Login" type="text">
+        <input name="password" placeholder="Password" type="password">
+        <input class="bt-site" id="bt-enter" value="Confirm" type="submit">
+    </form>
+</div>
+
+<div class="createPostPage">
+    <form name="description" method="post">
+        <div class="pic">
+            <strong></strong>
+            <span class="date"></span>
+            <img name="createPic" src="" alt="photo" class="photopost">
+        </div>
+        <div class="input">
+            <input name="pic" type="file">
+            <input name="desc" placeholder="Description" type="text">
+            <input name="hashTag" placeholder="HashTags" type="text">
+            <input class="bt-site" id="bt-create" value="Confirm" type="submit">
+        </div>
+    </form>
+</div>
+
+<div class="errorPage"></div>
+
 <div class="clearfix"></div>
 
 <footer>
@@ -100,13 +113,15 @@
         y3602061@gmail.com
     </div>
     <div>
-        06.03.2019
+        06.04.2019
     </div>
 </footer>
+
 
 <script src="script.js"></script>
 <script src="view.js"></script>
 <script src="logic.js"></script>
+<script src="controller.js"></script>
 </body>
 
 </html>
