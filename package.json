@@ -1,0 +1,27 @@
+{
+  "name": "web-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "eslint-plugin-react": "^7.12.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuliaminkevich/WebProject.git"
+  },
+  "author": "yuliaminkevich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuliaminkevich/WebProject/issues"
+  },
+  "homepage": "https://github.com/yuliaminkevich/WebProject#readme"
+}
