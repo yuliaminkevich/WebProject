@@ -65,6 +65,7 @@ class View {
         document.querySelector('footer').style.position = 'fixed';
         document.querySelector('.loginPage').style.display = 'flex';
         document.getElementById('bt-exit').style.visibility = 'hidden';
+        document.getElementById('bt-add').style.visibility = 'hidden';
     }
 
     _createAddPostPage(id = null) {
