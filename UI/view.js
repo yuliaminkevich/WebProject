@@ -151,5 +151,4 @@ class View {
         document.getElementById("bt-add").style.visibility = 'hidden';
     }
 }
-
 let view = new View();
