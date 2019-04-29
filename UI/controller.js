@@ -226,19 +226,19 @@ class Controller {
         this.start();
         postList = PostList._restore();
         currentUser = localStorage.getItem("currentUser");
-        if (currentUser !== "null") {
+        if (currentUser !== null && currentUser !== "null") {
             logic.enter(currentUser);
         }
         logic.showPosts();
         countP = 10;
-        this.mainPage();
-        this.createAddBt();
-        this.createLoadBt();
-        this.createLoginBt();
-        this.createSignBt();
-        this.createFilterBt();
-        this.createAddConfirm();
-        this.createProcessPost();
+        this.mainPageBtn();
+        this.addBtn();
+        this.loadBtn();
+        this.loginBtn();
+        this.signBtn();
+        this.filterBtn();
+        this.addConfirmBtn();
+        this.processPostBtn();
     }
 
     start() {
@@ -251,14 +251,13 @@ class Controller {
         }
     }
 
-    m() {
+    mainPage() {
         logic.updatePosts();
     }
 
-    mainPage() {
-        this
+    mainPageBtn() {
         let load = document.getElementById('logo');
-        load.addEventListener('click', this.m);
+        load.addEventListener('click', this.mainPage);
     }
 
     loadPosts() {
@@ -269,7 +268,7 @@ class Controller {
         logic.loadPosts();
     }
 
-    createLoadBt() {
+    loadBtn() {
         let load = document.getElementById('bt-load');
         load.addEventListener('click', this.loadPosts);
 
@@ -277,15 +276,16 @@ class Controller {
 
     filter(e) {
         e.preventDefault();
-        author = document.getElementsByName('usernameFilter')[0].value;
-        dateFrom = document.getElementsByName('dateFrom')[0].value;
-        dateTo = document.getElementsByName('dateTo')[0].value;
-        hashTags = document.getElementsByName('hashTag')[0].value.split(' ');
+        let form = document.forms.filter;
+        author = form.usernameFilter.value;
+        dateFrom = form.dateFrom.value;
+        dateTo = form.dateTo.value;
+        hashTags = form.hashTag.value.split(' ');
         logic.updatePosts(author, dateFrom, dateTo, hashTags);
         isFiltered = 1;
     }
 
-    createFilterBt() {
+    filterBtn() {
         let filterBt = document.forms.filter;
         filterBt.addEventListener('submit', this.filter);
     }
@@ -295,13 +295,12 @@ class Controller {
         let state = signIn.innerHTML;
         if (state === 'Sign In') {
             view._createLoginPage();
-
         } else {
             logic.exit();
         }
     }
 
-    createSignBt() {
+    signBtn() {
         let signIn = document.getElementById('bt-exit');
         signIn.addEventListener('click', this.enterExit);
     }
@@ -318,6 +317,7 @@ class Controller {
         if (!(checkPassword = localStorage.getItem(login))) {
             localStorage.setItem(login, password);
             logic.enter(login);
+            return true;
         }
         if (checkPassword !== password) {
             logic.exit();
@@ -327,19 +327,19 @@ class Controller {
         logic.enter(login);
     }
 
-    createLoginBt() {
+    loginBtn() {
         let formLogin = document.forms.login;
         formLogin.addEventListener('submit', this.authorization);
     }
 
-    addPostPage() {
+    createAddPostPage() {
         view._createAddPostPage();
     }
 
-    createAddBt() {
+    addBtn() {
         addOrEdit = 0;
         let btAddPost = document.getElementById('bt-add');
-        btAddPost.addEventListener('click', this.addPostPage);
+        btAddPost.addEventListener('click', this.createAddPostPage);
     }
 
     addPost(e) {
@@ -361,12 +361,12 @@ class Controller {
         document.getElementsByName('createPic')[0].src = pic;
     }
 
-    createAddConfirm() {
-        document.getElementsByName('pic')[0].addEventListener('change',this.pic)
+    addConfirmBtn() {
+        document.getElementsByName('pic')[0].addEventListener('change', this.pic)
         document.forms.description.addEventListener('submit', this.addPost);
     }
 
-    createProcessPost() {
+    processPostBtn() {
         document.querySelector('.content').addEventListener('click', this.processPost);
     }
 
@@ -380,7 +380,7 @@ class Controller {
         } else if (button === 'bt-delete') {
             logic.removePost(postId);
         } else if (button === 'bt-like') {
-            if (currentUser !== null && currentUser !=="null") {
+            if (currentUser !== null && currentUser !== "null") {
                 if (logic.likePost(postId)) {
                     e.target.style.color = 'red';
                     return;

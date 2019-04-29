@@ -74,7 +74,6 @@ class Logic {
         document.querySelector('.errorPage').style.display = 'none';
         document.querySelector('.loginPage').style.display = 'none';
         document.querySelector('.not-found').style.display = 'none';
-        document.getElementById('bt-add').style.visibility = 'visible';
 
     }
 
