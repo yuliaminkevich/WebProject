@@ -5,6 +5,21 @@
          version="4.0">
     <servlet>
         <servlet-name>JavaWebApplication</servlet-name>
+<<<<<<< HEAD
+        <servlet-class>com.bsu.practice.FirstSevlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Status</servlet-name>
+        <servlet-class>com.bsu.practice.StatusServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetName</servlet-name>
+        <servlet-class>com.bsu.practice.GetNameServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Check</servlet-name>
+        <servlet-class>com.bsu.practice.CheckServlet</servlet-class>
+=======
         <servlet-class>com.bsu.practice.JavaWebApplication</servlet-class>
     </servlet>
     <servlet>
@@ -18,6 +33,7 @@
     <servlet>
         <servlet-name>Check</servlet-name>
         <servlet-class>com.bsu.practice.Check</servlet-class>
+>>>>>>> origin/task8
     </servlet>
     <servlet>
         <servlet-name>showPage</servlet-name>
@@ -25,6 +41,17 @@
     </servlet>
     <servlet>
         <servlet-name>test1</servlet-name>
+<<<<<<< HEAD
+        <servlet-class>com.bsu.practice.Test1Servlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>test2</servlet-name>
+        <servlet-class>com.bsu.practice.Test2Servlet</servlet-class>
+    </servlet>
+    <filter>
+        <filter-name>filter</filter-name>
+        <filter-class>com.bsu.practice.FilterServlet</filter-class>
+=======
         <servlet-class>com.bsu.practice.Test1</servlet-class>
     </servlet>
     <servlet>
@@ -34,6 +61,7 @@
     <filter>
         <filter-name>filter</filter-name>
         <filter-class>com.bsu.practice.ServletFilter</filter-class>
+>>>>>>> origin/task8
     </filter>
 
 
@@ -48,7 +76,11 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>GetName</servlet-name>
+<<<<<<< HEAD
+        <url-pattern>/get</url-pattern>
+=======
         <url-pattern>/get*</url-pattern>
+>>>>>>> origin/task8
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Check</servlet-name>
