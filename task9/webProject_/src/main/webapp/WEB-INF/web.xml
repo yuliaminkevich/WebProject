@@ -1,0 +1,100 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>First</servlet-name>
+    <servlet-class>bsu.fpmi.practice.task8.FirstSevlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Status</servlet-name>
+    <servlet-class>bsu.fpmi.practice.task8.StatusServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetName</servlet-name>
+    <servlet-class>bsu.fpmi.practice.task8.GetNameServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Check</servlet-name>
+    <servlet-class>bsu.fpmi.practice.task8.CheckServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>test1</servlet-name>
+    <servlet-class>bsu.fpmi.practice.task8.Test1Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>test2</servlet-name>
+    <servlet-class>bsu.fpmi.practice.task8.Test2Servlet</servlet-class>
+  </servlet>
+  <filter>
+    <filter-name>filter</filter-name>
+    <filter-class>bsu.fpmi.practice.task8.FilterServlet</filter-class>
+  </filter>
+
+
+  <servlet-mapping>
+    <servlet-name>First</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Status</servlet-name>
+    <url-pattern>/status</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetName</servlet-name>
+    <url-pattern>/get</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Check</servlet-name>
+    <url-pattern>/check</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>test1</servlet-name>
+    <url-pattern>/test1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>test2</servlet-name>
+    <url-pattern>/test2</url-pattern>
+  </servlet-mapping>
+  <filter-mapping>
+    <filter-name>filter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <servlet>
+    <servlet-name>PhotoPost</servlet-name>
+    <servlet-class>bsu.fpmi.practice.task9.PostServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PhotoPosts</servlet-name>
+    <servlet-class>bsu.fpmi.practice.task9.PostListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>User</servlet-name>
+    <servlet-class>bsu.fpmi.practice.task9.UserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Like</servlet-name>
+    <servlet-class>bsu.fpmi.practice.task9.LikeServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>PhotoPost</servlet-name>
+    <url-pattern>/photo-post</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PhotoPosts</servlet-name>
+    <url-pattern>/photoposts</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>User</servlet-name>
+    <url-pattern>/user</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Like</servlet-name>
+    <url-pattern>/like</url-pattern>
+  </servlet-mapping>
+</web-app>
