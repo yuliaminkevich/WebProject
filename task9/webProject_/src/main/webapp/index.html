@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GoReality</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Laila:600|PT+Serif" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="header1">
+        <img src="images/logo.svg" alt="logo" id="logo">
+    </div>
+    <button class="bt-site" id="bt-add">Add Photo</button>
+    <div class="header1">
+        <span id="name-user"></span>
+        <button class="bt-site" id="bt-exit">Sign In</button>
+    </div>
+</header>
+
+<div class="background"></div>
+
+<main>
+    <div class="content">
+        <p class="not-found">not found</p>
+        <template id="postTemplate">
+            <div class="post">
+                <div class="pic">
+                    <strong></strong>
+                    <span class="date"></span>
+                    <img src="" alt="photo" class="photopost">
+                    <button type="button" class="bt-like">
+                        <i class="fa fa-heart fa-lg"></i>
+                    </button>
+                    <button type="button" class="bt-edit">
+                        <i class="fa fa-edit fa-lg"></i>
+                    </button>
+                    <button type="button" class="bt-delete">
+                        <i class="fa fa-trash-o fa-lg"></i>
+                    </button>
+                </div>
+                <div class="description">
+                    <p></p>
+                    <p class="hashTag"></p>
+                </div>
+            </div>
+        </template>
+
+
+    </div>
+
+    <div class="sidebar">
+        <p class="search">
+            Filter
+        </p>
+        <div class="filter">
+            <form name="filter" action="" method="post">
+                <input name="usernameFilter" placeholder="Username" type="search">
+                <input name="dateFrom" placeholder="Date from" type="date">
+                <input name="dateTo" placeholder="Date to" type="date">
+                <input name="hashTag" placeholder="Hashtag" type="search">
+                <button type="submit" class="bt-search">
+                    <i class="fa fa-search fa-2x"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    <button class="bt-site" id="bt-load">
+        Load
+    </button>
+</main>
+
+<div class="loginPage">
+    <form name="login" method="post">
+        <input name="username" placeholder="Login" type="text">
+        <input name="password" placeholder="Password" type="password">
+        <input class="bt-site" id="bt-enter" value="Confirm" type="submit">
+    </form>
+</div>
+
+<div class="createPostPage">
+    <form name="description" method="post">
+        <div class="pic">
+            <strong></strong>
+            <span class="date"></span>
+            <img name="createPic" src="" alt="photo" class="photopost">
+        </div>
+        <div class="input">
+            <input name="pic" type="file">
+            <input name="desc" placeholder="Description" type="text">
+            <input name="hashTag" placeholder="HashTags" type="text">
+            <input class="bt-site" id="bt-create" value="Confirm" type="submit">
+        </div>
+    </form>
+</div>
+
+<div class="errorPage"></div>
+
+<div class="clearfix"></div>
+
+<footer>
+    <div>
+        GoReality
+    </div>
+    <div>
+        Минкевич Юлия
+    </div>
+    <div>
+        2 курс, 5 группа
+    </div>
+    <div>
+        y3602061@gmail.com
+    </div>
+    <div>
+        06.04.2019
+    </div>
+</footer>
+
+
+<script src="script.js"></script>
+<script src="view.js"></script>
+<script src="logic.js"></script>
+<script src="controller.js"></script>
+</body>
+
+</html>
